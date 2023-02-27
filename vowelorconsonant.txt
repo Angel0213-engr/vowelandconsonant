@@ -1,0 +1,38 @@
+import java.util.*;
+import java.util.Scanner;
+public class upper {
+
+    public static void main (String[] args){
+        //declare variable
+        char ch;
+        String enter;
+        //input
+        Scanner input = new Scanner (System.in);
+        System.out.print("Enter a character: ");
+        enter = input.nextLine();
+        //convert string to character
+        ch = enter.charAt(0); // can be ch = input.next().charAt(0)
+
+        if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U' || ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
+            if (ch>='A' && ch<='Z'){ //ch>=65 && ch<=90
+                System.out.print("The letter " + ch + " is a vowel and in uppercase");
+            }
+            else if (ch>='a' && ch<='z'){
+                System.out.print("The letter " + ch + " is a vowel and in lowercase");
+            }
+        }
+        else{
+                if (ch>='A' && ch<='Z'){
+                    System.out.print("The letter " + ch + " is a consonant and in uppercase");
+                }
+                else if (ch>='a' && ch<='z'){
+                    System.out.print("The letter " + ch + " is a consonant and in lowercase");
+                }
+                else {
+                    System.out.print("Please input character");
+                }
+        }
+
+
+    }
+}
